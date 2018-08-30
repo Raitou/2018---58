@@ -4,15 +4,15 @@ using namespace std;
 
 int main () 
 {
-    int x, y, z;
-    cin >> x >> y >> z;
-    if(x < y){
-        if(x > z)
-        swap(x, z);
+    int a, b, c; //Inputs A B C
+    cin >> a >> b >> c;
+    if(a < b){ /* A very Confusing even I got confused and alot of experimentations to get here */
+        if(a > c) //Understand it bit by bit and u will get it XD
+        swap(a, c);
     } else {
-        if(y < z) swap(x, y);
-        else swap(x, z);
+        if(b < c) swap(a, b);
+        else swap(a, c);
     }
-    if (z < y) swap (y, z);
-    cout << x << endl << y << endl << z;
+    if (c < b) swap (b, c);
+    cout << a << endl << b << endl << c; // Prints out
 }
