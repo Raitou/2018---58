@@ -80,3 +80,5 @@ void switchFlag(){
 			std::cout << "OUT OF RANGE";
 	}
 }
+
+//code of N01 - Raitou
