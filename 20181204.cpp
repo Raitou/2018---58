@@ -21,3 +21,8 @@ int main(){
 		}	
 	}
 }
+/*
+Explanation of Algorithm:
+This code receives input from user as seen in line 13
+and reversed only just the print of the inputted number
+*/
