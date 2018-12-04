@@ -202,3 +202,15 @@ int main(){
 	cin.ignore();
 	main();
 }
+
+/* Explanation:
+The algorithm for the getting of the day is based on The Key Method which can be found here at this link: 
+http://mathforum.org/dr.math/faq/faq.calendar.html
+
+I used recursion to repeat the process by calling main function inside the main function to rerun the process
+and used some system commands like pause and clear for the user interactions as seen from line 203.
+
+The days past isn't part of the algorithm its my own arithmetic algorithm which in I used switch statement
+a very creative switch statement as it doesn't have a break statement for every case statements which can be seen
+from line 170.
+*/
