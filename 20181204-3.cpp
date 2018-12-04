@@ -5,9 +5,16 @@ using namespace std;
 int month, date, year;
 
 int main(){
+	system("cls");
+	cout << "Input Month/Day/Year and 0 0 0 for Exit (Format MM DD YYYY)\n";
 	cin >> month;
 	cin >> date;
 	cin >> year;
+	
+	//checks if input values are 0
+	if(month == 0 || date == 0 || year == 0){
+		return 0;
+	}
 	
 	int key_value;
 	int base = 0;
@@ -87,6 +94,10 @@ int main(){
 	int key_year = key_decade/4;
 	int key_day = key_year+date;
 	if(leap_year == 1 && (month == 1 || month == 2)){
+		key_month = key_day+key_value-1;
+	} else {
+		key_month = key_day+key_value;
+	}
 		
 	//get century
 	while(true){
@@ -181,12 +192,13 @@ int main(){
 			} else {
 				days_past+=28;
 			}
-			
 		case 1:
 			days_past+=31;
 		default:
-			cout << days_past+date << " day of the year.";
+			cout << days_past+date << " day of the year.\n";
 		break;
 	}
-	
+	system("pause");
+	cin.ignore();
+	main();
 }
