@@ -66,3 +66,4 @@ int main(){
 /*Explanation: This is a very advanced in depth analysis of 2d arrays which includes on how arrays accessing their variables
 in the memory and how they behave thru the entire setup. I prefer explaining it by person or chat as this will have a very long
 explanation regarding the matrix z array. But overall what I did here is multiplying the Matrix X to Y and results in matrix z.
+*/
