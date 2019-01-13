@@ -14,13 +14,16 @@ and definitions here
 
 //end
 
+//CONSTANTS!!!
+const char alphaNum[] = "ABCDGHIJKLMNOPQRSTVWXYZ0123456789-";
+
 /*********************
 Write Prototype Here:
 *********************/
 
 //Login System
 int userLogin(std::string &loginString);
-void userLoginStringFormatCheck(std::string &loginString);
+bool userLoginStringFormatCheck(std::string &loginString);
 
 //Login Algo
 std::string userRetLoginType(std::string &loginString);
