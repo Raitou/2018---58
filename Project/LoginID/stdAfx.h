@@ -5,7 +5,7 @@ and definitions here
 
 //Libraries
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <windows.h>
 
 //Definitions
@@ -21,9 +21,28 @@ const char alphaNum[] = "ABCDGHIJKLMNOPQRSTVWXYZ0123456789-";
 Write Prototype Here:
 *********************/
 
+//Struct
+
+struct sloginKey {
+	std::string key1;
+	std::string key2;
+	std::string key3;
+	std::string key4;
+	std::string key5;
+};
+
+struct sloginString {
+	bool isAdmin;
+	int yearReg;
+	sloginKey loginUKey;
+};
+
+
+//end
+
 //Login System
-int userLogin(std::string &loginString);
-bool userLoginStringFormatCheck(std::string &loginString);
+int userLogin(std::string &loginString, sloginString &login);
+bool userLoginStringFormatCheck(std::string &loginString, sloginString &login);
 
 //Login Algo
 std::string userRetLoginType(std::string &loginString);
