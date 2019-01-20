@@ -1,14 +1,6 @@
 #include "stdAfx.h"
 
 int userLogin(std::string &loginString, sloginString &login){
-	//Test Data
-	/*if(std::strcmp("0-2018-ABC12-345DZ-YG678-90IJK-LMNOP", loginString.c_str()) == 0){
-		return 0;
-	} else {
-		return 1;
-	}*/
-	//end of test
-	
 	if(userLoginStringFormatCheck(loginString, login)){
 		return 1;
 	} else {
@@ -22,7 +14,7 @@ bool userLoginStringFormatCheck(std::string &loginString, sloginString &login){
 	std::string x;
 	
 	//STEP 1: CHECK SIZE!
-	if(strlen(loginString.c_str()) != 36){
+	if(strlen(loginString.c_str()) != 30){
 		return false;
 	}
 	
@@ -47,7 +39,6 @@ bool userLoginStringFormatCheck(std::string &loginString, sloginString &login){
 	//STEP 3: CHECK FORMAT! JUST DASHES
 	for(int i = 0; strlen(loginString.c_str()) > i; i++){
 		switch(i){
-			case 24:
 			case 18:
 			case 12:
 			case 6:
@@ -92,7 +83,7 @@ bool userLoginStringFormatCheck(std::string &loginString, sloginString &login){
 	} 
 
 	//STEP 6: getUKey
-	for(int i = 0; 5 > i; i++){
+	for(int i = 0; 4 > i; i++){
 		x = loginString.substr(pos);
 		pos += (x.find("-") + 1);
 		if(pos >= 0){
@@ -116,9 +107,6 @@ bool userLoginStringFormatCheck(std::string &loginString, sloginString &login){
 					break;
 				case 3:
 					login.loginUKey.key4 = x;
-					break;
-				case 4:
-					login.loginUKey.key5 = x;
 					break;
 				default:
 					return false;

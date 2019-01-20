@@ -1,5 +1,4 @@
 #include "stdAfx.h"
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
 	//Define login as Login String
@@ -13,9 +12,9 @@ int main() {
 	
 	//This is just a login but this has complicated things running on background...
 	std::getline(std::cin, loginString);
-	if(userLogin(loginString, loginStruct)){
-		printf("Login Success!!!");
-	} else {		
+	if(userLogin(loginString, loginStruct) && keyIntegrity(loginStruct.loginUKey)){
+		printf("Login Success!!");
+	} else {
 		printf("Login Failed...");
 	}
 	
