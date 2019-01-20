@@ -10,7 +10,7 @@ int main() {
 	SetConsoleTitle("Programming 2 Midterm Project");
 	printf("Login: ");
 	
-	//This is just a login but this has complicated things running on background...
+	//This is just a login but this has a not that complicated algorithm...
 	std::getline(std::cin, loginString);
 	if(userLogin(loginString, loginStruct) && keyIntegrity(loginStruct.loginUKey)){
 		printf("Login Success!!");

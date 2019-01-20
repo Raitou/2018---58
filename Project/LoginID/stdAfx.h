@@ -38,11 +38,6 @@ struct sloginString {
 int userLogin(std::string &loginString, sloginString &login);
 bool userLoginStringFormatCheck(std::string &loginString, sloginString &login);
 
-//Login Algo
-std::string userRetLoginType(std::string &loginString);
-std::string userRetLoginYear(std::string &loginString);
-std::string userRetLoginKey(std::string &loginString);
-
 //Key Verify
 int keyIntegrity(sloginKey &key);
 bool keyVerify(sloginKey &key);
