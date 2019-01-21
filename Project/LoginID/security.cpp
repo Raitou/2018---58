@@ -9,7 +9,6 @@ int keyIntegrity(sloginKey &key){
 }
 
 bool keyVerify(sloginKey &key){
-	
 	//cmp key1, key2
 	int x = 0; //Checking 1st Key Value
 	int y = 0; //Checking 2nd Key Value
@@ -25,8 +24,13 @@ bool keyVerify(sloginKey &key){
 		y += (int)key.key2.c_str()[i];
 	}
 	
-	if((y != x && y <= 250) &&
-	strcmp(key.key1.c_str(), key.key2.c_str()) == 0){
+	printf("%d - %d", x, y);
+	
+	if(x != y){
+	    return false;
+	}
+	
+	if(strcmp(key.key1.c_str(), key.key2.c_str()) == 0){
 		return false;
 	}
 	
@@ -36,10 +40,14 @@ bool keyVerify(sloginKey &key){
 	for(int i = 0; strlen(key.key3.c_str()) > i; i++){
 		x += (int)key.key3.c_str()[i];
 	}
-		
-	if(x <= 240 && (
+	
+	if(x <= 240){
+		return false;
+	}
+	
+	if(
 	strcmp(key.key1.c_str(), key.key3.c_str()) == 0 &&
-	strcmp(key.key2.c_str(), key.key3.c_str()) == 0)){
+	strcmp(key.key2.c_str(), key.key3.c_str()) == 0){
 		return false;
 	}
 	
@@ -47,12 +55,14 @@ bool keyVerify(sloginKey &key){
 		y += (int)key.key4.c_str()[i];
 	}
 	
-	if((y != x && y <= 240) && (
-	strcmp(key.key1.c_str(), key.key4.c_str()) == 0 &&
-	strcmp(key.key2.c_str(), key.key4.c_str()) == 0 &&
-	strcmp(key.key3.c_str(), key.key4.c_str()) == 0)){
-		return false;
+	if(x != y){
+	    return false;
 	}
 	
-	return true;
+	if(
+	strcmp(key.key1.c_str(), key.key4.c_str()) == 0 &&
+	strcmp(key.key2.c_str(), key.key4.c_str()) == 0 &&
+	strcmp(key.key3.c_str(), key.key4.c_str()) == 0){
+		return false;
+	}
 }
