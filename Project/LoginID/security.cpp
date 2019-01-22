@@ -1,7 +1,7 @@
 #include "stdAfx.h"
 
 int keyIntegrity(sloginKey &key){
-	if(keyVerify){
+	if(keyVerify(key)){
 		return 1;
 	} else {
 		return 0;
@@ -23,8 +23,6 @@ bool keyVerify(sloginKey &key){
 	for(int i = 0; strlen(key.key2.c_str()) > i; i++){
 		y += (int)key.key2.c_str()[i];
 	}
-	
-	printf("%d - %d", x, y);
 	
 	if(x != y){
 	    return false;
@@ -65,4 +63,6 @@ bool keyVerify(sloginKey &key){
 	strcmp(key.key3.c_str(), key.key4.c_str()) == 0){
 		return false;
 	}
+	
+	return true;
 }

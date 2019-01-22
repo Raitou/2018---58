@@ -1,10 +1,10 @@
-#Python 2.7
+#Python 3
 
 import random
 import sys
 
-print "Login ID Key Generator by Raitou"
-print "This is written due to lack of libraries in C++ for Random Generator"
+print ("Login ID Key Generator by Raitou")
+print ("This is written due to lack of libraries in C++ for Random Generator")
 
 def check_key(key):
 	char_sum = 0
@@ -38,4 +38,4 @@ while True:
 		key5 = ""
 	elif s1 == s2 and s3 == s4:
 		if s1 > 245 and s2 > 245 and s3 > 245 and s4 > 245:
-			print "Found valid key: 0-2018-{0}-{1}-{2}-{3}".format(key1,key2,key3,key4)
+			print ("Found valid key: 0-2018-{}-{}-{}-{}".format(key1,key2,key3,key4))
