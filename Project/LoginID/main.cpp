@@ -12,7 +12,7 @@ int main() {
 	
 	//This is just a login but this has a not that complicated algorithm...
 	std::getline(std::cin, loginString);
-	if(userLogin(loginString, loginStruct) && keyIntegrity(loginStruct.loginUKey)){
+	if(userLogin(loginString, loginStruct) == 1 && keyIntegrity(loginStruct.loginUKey) == 1){
 		printf("Login Success!!");
 	} else {
 		printf("Login Failed...");
