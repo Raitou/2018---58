@@ -6,6 +6,7 @@ and definitions here
 //Libraries
 #include <iostream>
 #include <string>
+#include <ostream>
 #include <windows.h>
 //end
 
@@ -23,6 +24,8 @@ struct sloginKey {
 	std::string key2;
 	std::string key3;
 	std::string key4;
+	int uid1;
+	int uid2;
 };
 
 struct sloginString {
@@ -31,8 +34,12 @@ struct sloginString {
 	sloginKey loginUKey;
 };
 
-
 //end
+
+//UI MESSAGES
+void uiMsg();
+void YorN();
+void start();
 
 //Login System
 int userLogin(std::string &loginString, sloginString &login);
@@ -43,8 +50,8 @@ int keyIntegrity(sloginKey &key);
 bool keyVerify(sloginKey &key);
 
 //Menu
-void menuStudent();
-void menuAdmin();
-void printInfo(int &userID);
+void menuStudent(sloginString &login);
+void menuAdmin(sloginString &login);
+void printInfo(sloginString &login);
 
 //end

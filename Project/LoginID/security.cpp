@@ -28,6 +28,8 @@ bool keyVerify(sloginKey &key){
 	    return false;
 	}
 	
+	key.uid1 = x;
+	
 	if(strcmp(key.key1.c_str(), key.key2.c_str()) == 0){
 		return false;
 	}
@@ -64,5 +66,6 @@ bool keyVerify(sloginKey &key){
 		return false;
 	}
 	
+	key.uid2 = y;
 	return true;
 }
