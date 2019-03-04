@@ -52,4 +52,9 @@ bool Security::formatCheck(std::string &key){
 	
 	//Start Checking dashes
 	int pos = key.find("-") + 1;
+	
+	
+	
+	
+	return true;
 }
