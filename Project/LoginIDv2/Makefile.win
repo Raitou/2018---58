@@ -1,15 +1,15 @@
-# Project: Login ID with Integrity Check
+# Project: Project2
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o login.o security.o
-LINKOBJ  = main.o login.o security.o
+OBJ      = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
+LINKOBJ  = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
 LIBS     = -L"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib""" -L"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/lib" -static-libstdc++ -static-libgcc -std=c++17
 INCS     = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include"
 CXXINCS  = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
-BIN      = "Login ID with Integrity Check.exe"
+BIN      = Login.exe
 CXXFLAGS = $(CXXINCS) -s
 CFLAGS   = $(INCS) -s
 RM       = rm.exe -f
@@ -27,8 +27,17 @@ $(BIN): $(OBJ)
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
 
-login.o: login.cpp
-	$(CPP) -c login.cpp -o login.o $(CXXFLAGS)
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
 
-security.o: security.cpp
-	$(CPP) -c security.cpp -o security.o $(CXXFLAGS)
+Security.o: Security.cpp
+	$(CPP) -c Security.cpp -o Security.o $(CXXFLAGS)
+
+AdvConsole.o: AdvConsole.cpp
+	$(CPP) -c AdvConsole.cpp -o AdvConsole.o $(CXXFLAGS)
+
+AdvConsoleWin32.o: AdvConsoleWin32.cpp
+	$(CPP) -c AdvConsoleWin32.cpp -o AdvConsoleWin32.o $(CXXFLAGS)
+
+pKey.o: pKey.cpp
+	$(CPP) -c pKey.cpp -o pKey.o $(CXXFLAGS)
