@@ -21,5 +21,11 @@ bool User::Validate(){
 	if(!formatCheck(pKey)){
 		return false;
 	}
+	
+	
+	/*
+	if(!keyVerify()){
+		return false;
+	}*/
 	return true;
 }

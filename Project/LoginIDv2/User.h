@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <string>
 #include "Security.h"
 
 class User : public Security
@@ -15,17 +14,6 @@ class User : public Security
 		bool Validate();
 	private:
 		std::string pKey;
-		struct sloginKey {
-			std::string key1;
-			std::string key2;
-			std::string key3;
-			std::string key4;
-		};
-		struct sloginString {
-			bool isAdmin;
-			int yearReg;
-			sloginKey loginUKey;
-		};
 };
 
 #endif

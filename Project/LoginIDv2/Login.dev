@@ -81,26 +81,6 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=Interface.h
-CompileCpp=1
-Folder=Interface
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit5]
-FileName=Interface.cpp
-CompileCpp=1
-Folder=Interface
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit6]
 FileName=Security.h
 CompileCpp=1
 Folder=Security
@@ -110,7 +90,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit7]
+[Unit5]
 FileName=Security.cpp
 CompileCpp=1
 Folder=Security
@@ -120,7 +100,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
+[Unit6]
 FileName=AdvConsole.h
 CompileCpp=1
 Folder=Interface/AdvConsole
@@ -130,7 +110,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit7]
 FileName=AdvConsole.cpp
 CompileCpp=1
 Folder=Interface/AdvConsole
@@ -140,10 +120,30 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit10]
+[Unit8]
 FileName=AdvConsoleWin32.cpp
 CompileCpp=1
 Folder=Interface/AdvConsole
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=pKey.cpp
+CompileCpp=1
+Folder=Interface
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit10]
+FileName=pKey.h
+CompileCpp=1
+Folder=Interface
 Compile=1
 Link=1
 Priority=1000

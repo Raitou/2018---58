@@ -6,9 +6,9 @@ CC       = gcc.exe
 WINDRES  = windres.exe
 OBJ      = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
 LINKOBJ  = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
-LIBS     = -L"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib""" -L"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/lib" -static-libstdc++ -static-libgcc -std=c++17
-INCS     = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include"
-CXXINCS  = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
+LIBS     = -L"C:/Users/201812358/C++17/mingw64/lib" -L"C:/Users/201812358/C++17/mingw64/x86_64-w64-mingw32/lib" -static-libstdc++ -static-libgcc -std=c++17
+INCS     = -I"C:/Users/201812358/C++17/mingw64/include" -I"C:/Users/201812358/C++17/mingw64/x86_64-w64-mingw32/include" -I"C:/Users/201812358/C++17/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include"
+CXXINCS  = -I"C:/Users/201812358/C++17/mingw64/include" -I"C:/Users/201812358/C++17/mingw64/x86_64-w64-mingw32/include" -I"C:/Users/201812358/C++17/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include" -I"C:/Users/201812358/C++17/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
 BIN      = Login.exe
 CXXFLAGS = $(CXXINCS) -s
 CFLAGS   = $(INCS) -s

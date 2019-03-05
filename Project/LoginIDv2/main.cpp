@@ -10,14 +10,13 @@ int main(){
 	//Intialize pKey Library	
 	pKey init;
 	
-	std::cout << Color(AC_MAGENTA) << "Login: " << Color(AC_DEFAULT);
+	std::cout << Color(AC_MAGENTA) << " Login: " << Color(AC_DEFAULT);
 	std::cin >> key;
 	
 	init.Set(key); //setting pKey
 	if(init.Validate()){
-		std::cout << "Test";
+		init.printInfo();
 	}
-	
 	//init.Print(); //test
 	return 0;
 }
