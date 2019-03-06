@@ -169,6 +169,14 @@ bool Security::keyVerify(){
 	
 	uid2 = keyVal2;
 	
+	if(uid1 == uid2 && isAdmin != 1){
+		return false;
+	}
+	
+	if(uid1 != uid2 && isAdmin != 0){
+		return false;
+	}
+	
 	return true;
 }
 
@@ -179,5 +187,9 @@ void Security::printInfo(){
 	<< key3 << std::endl
 	<< key4 << std::endl
 	<< isAdmin << std::endl
-	<< yearReg << std::endl;
+	<< yearReg << std::endl
+	<< keyVal1 << std::endl
+	<< keyVal2 << std::endl
+	<< uid1 << std::endl
+	<< uid2 << std::endl;
 }

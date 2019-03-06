@@ -14,6 +14,7 @@ def check_key(key):
 	sys.stdout.flush()
 	return char_sum
 
+isAdmin = ""
 key1 = ""
 key2 = ""
 key3 = ""
@@ -38,4 +39,15 @@ while True:
 		key5 = ""
 	elif s1 == s2 and s3 == s4:
 		if s1 > 245 and s2 > 245 and s3 > 245 and s4 > 245:
-			print ("Found valid key: 0-2018-{}-{}-{}-{}".format(key1,key2,key3,key4))
+			if s1 == s3:
+				isAdmin = 1
+			else:
+				isAdmin = 0
+			print ("Found valid key: {}-2018-{}-{}-{}-{}".format(isAdmin,key1,key2,key3,key4))
+			
+			
+			
+			
+			
+			
+			

@@ -10,6 +10,7 @@ class pKey : public User
 {
 	public:
 		pKey();
+		void menu(int&, int&);
 	private:
 		const std::string logo1 = " /$$$$$$$  /$$   /$$ /$$$$$$$$";
 		const std::string logo2 = "| $$__  $$| $$  /$$/| $$_____/";

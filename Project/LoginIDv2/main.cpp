@@ -15,8 +15,8 @@ int main(){
 	
 	init.Set(key); //setting pKey
 	if(init.Validate()){
-		init.printInfo();
+		init.printInfo(); //test
+		
 	}
-	//init.Print(); //test
 	return 0;
 }
