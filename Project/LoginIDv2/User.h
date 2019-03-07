@@ -5,7 +5,7 @@
 #include <string>
 #include "Security.h"
 
-class User : public Security
+class User
 {
 	public:
 		User();

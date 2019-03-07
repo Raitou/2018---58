@@ -16,6 +16,8 @@ int main(){
 	init.Set(key); //setting pKey
 	if(init.Validate()){
 		init.printInfo(); //test
+		//menu if admin
+		//menu if user
 		
 	}
 	return 0;

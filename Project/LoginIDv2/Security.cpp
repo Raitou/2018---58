@@ -1,8 +1,11 @@
 #include "Security.h"
 
-Security::Security()
-{
+Security::Security(){
 	return;
+}
+
+bool Security::isAdmin(){
+	return isAdmin;
 }
 
 bool Security::formatCheck(std::string &pKey){	

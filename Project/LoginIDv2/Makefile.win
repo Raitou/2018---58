@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
-LINKOBJ  = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o
+OBJ      = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o ../../../12321sa.o
+LINKOBJ  = main.o User.o Security.o AdvConsole.o AdvConsoleWin32.o pKey.o ../../../12321sa.o
 LIBS     = -L"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib""" -L"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/lib" -static-libstdc++ -static-libgcc -std=c++17
 INCS     = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include"
 CXXINCS  = -I"C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include""" -I"""C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
@@ -41,3 +41,6 @@ AdvConsoleWin32.o: AdvConsoleWin32.cpp
 
 pKey.o: pKey.cpp
 	$(CPP) -c pKey.cpp -o pKey.o $(CXXFLAGS)
+
+../../../12321sa.o: ../../../12321sa.cpp
+	$(CPP) -c ../../../12321sa.cpp -o ../../../12321sa.o $(CXXFLAGS)

@@ -18,4 +18,7 @@ pKey::pKey()
 	<< "\t" << pkEmuInfo2 << std::endl << std::endl;
 }
 
+void menu(){
+	
+}
 

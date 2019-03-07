@@ -1,12 +1,10 @@
 #include "User.h"
 
-User::User()
-{
+User::User(){
 	return;
 }
 
-void User::Set(std::string &x)
-{
+void User::Set(std::string &x){
 	pKey = x;
 }
 
