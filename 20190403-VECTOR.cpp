@@ -52,8 +52,9 @@ int main(){
 			break;
 		}
 		if(k[i] == SHRT_MIN){
-			std::cout << k[i];	
+			break;	
 		}
+		std::cout << k[i];
 	}
 	
 	//clean up vector afteruse
