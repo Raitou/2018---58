@@ -56,15 +56,17 @@ public class ChatBotWindow extends ChatBotLogic {
         BUTTON_ASK.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList <String> ans = null;
+                ArrayList <String> ans = new ArrayList();
                 if(obj.questionsDB.containsKey(TEXTFIELD_QUESTION.getText().toUpperCase())){
                     Random r = new Random();
-                    ans = obj.questionsDB.get(TEXTFIELD_QUESTION.getText().toUpperCase());
-                    int n = r.nextInt(ans.size());
+                    ArrayList <String> len = obj.questionsDB.get(TEXTFIELD_QUESTION.getText().toUpperCase());
+                    int n = r.nextInt(len.size());
                     JOptionPane.showMessageDialog(BOT_FRAME, 
                             obj.questionsDB.get(TEXTFIELD_QUESTION.getText().toUpperCase()).get(n), 
                             "Respond", JOptionPane.INFORMATION_MESSAGE);
                 }else if(TEXTFIELD_QUESTION.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(BOT_FRAME, "The question can't be empty", "Warning", JOptionPane.WARNING_MESSAGE);
+                } else if(TEXTFIELD_QUESTION.getText().charAt(0) == ' '){
                     JOptionPane.showMessageDialog(BOT_FRAME, "The question can't be empty", "Warning", JOptionPane.WARNING_MESSAGE);
                 } else {
                     int c = (JOptionPane.showConfirmDialog(
@@ -73,28 +75,47 @@ public class ChatBotWindow extends ChatBotLogic {
                             "Responding", 
                             JOptionPane.YES_NO_OPTION, 
                             JOptionPane.INFORMATION_MESSAGE));
-                    if(c == JOptionPane.YES_OPTION){
+                    while(c == JOptionPane.YES_OPTION){
                         String message = JOptionPane.showInputDialog(
                                 BOT_FRAME, 
                                 "Answer:", 
                                 "Teach Me That", 
                                 JOptionPane.QUESTION_MESSAGE);
-                        if(message.isEmpty()){
+                        if(message == null){
                             JOptionPane.showMessageDialog(
                                     BOT_FRAME, 
                                     "You didn't teach me the answer", 
                                     "Respond", 
                                     JOptionPane.WARNING_MESSAGE);
+                            c = JOptionPane.NO_OPTION;
+                        } else if(message.isEmpty()){
+                            JOptionPane.showMessageDialog(
+                                    BOT_FRAME, 
+                                    "You didn't teach me the answer", 
+                                    "Respond", 
+                                    JOptionPane.WARNING_MESSAGE);
+                            c = JOptionPane.NO_OPTION;
+                        } else if(message.charAt(0) == ' '){
+                            JOptionPane.showMessageDialog(BOT_FRAME, "The answer can't be empty", "Warning", JOptionPane.WARNING_MESSAGE);
+                            c = JOptionPane.NO_OPTION;
                         }else{
-                            ans = new ArrayList();
                             ans.add(message);
                             JOptionPane.showMessageDialog(BOT_FRAME, 
                                     "Thank you for teaching me", 
                                     "Just saying", 
                                     JOptionPane.INFORMATION_MESSAGE);
                             obj.questionsDB.put(TEXTFIELD_QUESTION.getText().toUpperCase(), ans);
-                            serializeObject(FPATH, obj);
+                            c = JOptionPane.showConfirmDialog(
+                                    BOT_FRAME, 
+                                    "Do you want to add another answer to this question?", 
+                                    "Question", 
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.QUESTION_MESSAGE);
+                            if(c == JOptionPane.NO_OPTION){
+                                serializeObject(FPATH, obj);
+                            }
                         }
+                       
                     }
                 }
            }
@@ -122,6 +143,11 @@ public class ChatBotWindow extends ChatBotLogic {
             list.add("Pow pow pow pow");
             list.add("Happy happy happy yow");
             obj.questionsDB.put("WHAT DOES THE FOX SAY?", list);
+            list = new ArrayList();
+            list.add("Milk");
+            list.add("Water");
+            list.add("Juice");
+            obj.questionsDB.put("WHAT IS YOUR FAVOURITE DRINK?", list);
             super.serializeObject(FPATH, obj);
         } else {
             obj = super.deserializeObject(FPATH, obj);
