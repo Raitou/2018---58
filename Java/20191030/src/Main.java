@@ -1,8 +1,3 @@
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,6 +8,10 @@ import java.util.HashMap;
  *
  * @author 201812358
  */
-public class ChatBot implements Serializable {
-    public HashMap<String, ArrayList<String>> questionsDB;
+public class Main {
+    public static void main(String...args){
+        ChatBotWindow cbotWin = new ChatBotWindow();
+        cbotWin.initializeGUI();
+        cbotWin.initializeBackEnd();
+    }
 }
